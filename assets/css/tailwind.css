@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    .main-container {
+        @apply max-w-screen-sm mx-auto px-4;
+    }
+
+    .input {
+        @apply shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none;
+    }
+
+    .label {
+        @apply block text-gray-700 text-sm font-bold mb-2;
+    }
+
+    .modal-container {
+        @apply fixed z-20 flex items-center justify-center h-full w-full top-0;
+    }
+
+    .modal-content {
+        @apply h-auto max-w-screen-sm w-full bg-white rounded-lg p-8 z-20 mx-4;
+    }
+
+    .card-container {
+        @apply relative transition-colors duration-500 hover:bg-gray-100 rounded mb-4 overflow-hidden shadow-lg flex items-center justify-between px-4;
+    }
+
+    .button-primary {
+        @apply transition-colors duration-1000 bg-cyan-500 hover:bg-sky-700 disabled:bg-gray-300 text-white px-2 py-1 rounded;
+    }
+
+    .promo-container {
+        @apply transition-all duration-500 opacity-0 hover:opacity-100 absolute left-0 top-0 w-full h-full flex items-center justify-center bg-cyan-600 flex-col;
+    }
+
+
+    /* enter transitions */
+    .toast-enter-from {
+      opacity: 0;
+      transform: translateY(-60px);
+    }
+    .toast-enter-active {
+      transition: all 0.3s ease;
+    }
+  /* leave transitions */
+  
+    .toast-leave-to {
+      opacity: 0;
+      transform: translateY(-60px);
+    }
+    .toast-leave-active {
+      transition: all 0.3s ease;
+    }
+
+}
